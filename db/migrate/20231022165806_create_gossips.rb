@@ -1,6 +1,14 @@
 class CreateGossips < ActiveRecord::Migration[7.1]
-  def change
-
+      def change
+        create_table :gossips do |t|
+          t.string :author
+          t.text :content
     
-  end
+          t.timestamps
+        end
+      end
 end
+    
+  
+  
+

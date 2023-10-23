@@ -2,33 +2,22 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require_relative './lib/gossip'
 
-configure :development do
-  set :database, YAML.load(File.read('config/database.yml'))['development']
-end
+# Configuration de la base de données SQLite
+set :database, { adapter: 'sqlite3', database: 'db/my_database.db' }
 
-# Route to display the list of gossips
+# Route pour afficher la liste des gossips
 get '/' do
   @gossips = Gossip.all
   erb :index
 end
 
-
-
-# Route to process the submitted form data
+# Route pour traiter les données soumises via le formulaire
 post '/gossips' do
   author = params[:author]
   content = params[:content]
 
-  # app.rb
-get '/gossips' do
-  @gossips = db.execute('SELECT * FROM gossips')
-  erb :gossips
+  # Enregistrez le gossip dans votre base de données
+  Gossip.create(author: author, content: content)
+
+  redirect '/'  # Redirigez l'utilisateur vers la liste des gossips après avoir soumis le formulaire
 end
-
-
-   # Enregistrez le gossip dans votre base de données
-   Gossip.create(author: author, content: content)
-
-  redirect '/'  # Redirect the user to the list of gossips after submitting the form
-end
-
