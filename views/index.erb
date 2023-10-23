@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site de Gossip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gossip {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mon Site de Gossip</h1>
+    </header>
+
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/nouveau_gossip">Ajouter un Gossip</a>
+    </nav>
+
+    <div class="container">
+        <div class="gossip">
+            <h2>Gossip #1</h2>
+            <p>Contenu du gossip...</p>
+        </div>
+
+        <div class="gossip">
+            <h2>Gossip #2</h2>
+            <p>Contenu du gossip...</p>
+        </div>
+        <!-- Formulaire pour ajouter un gossip -->
+        <form action="/nouveau_gossip" method="post">
+            <label for="auteur">Auteur :</label>
+            <input type="text" id="auteur" name="auteur" required><br>
+
+            <label for="contenu">Contenu :</label>
+            <textarea id="contenu" name="contenu" rows="4" cols="50" required></textarea><br>
+
+            <input type="submit" value="Ajouter Gossip">
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2023 Mon Site de Gossip
+    </footer>
+</body>
+
+</html>

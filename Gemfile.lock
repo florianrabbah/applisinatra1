@@ -1,0 +1,68 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (7.1.1)
+      activesupport (= 7.1.1)
+    activerecord (7.1.1)
+      activemodel (= 7.1.1)
+      activesupport (= 7.1.1)
+      timeout (>= 0.4.0)
+    activesupport (7.1.1)
+      base64
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      mutex_m
+      tzinfo (~> 2.0)
+    base64 (0.1.1)
+    bigdecimal (3.1.4)
+    concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
+    drb (2.1.1)
+      ruby2_keywords
+    i18n (1.14.1)
+      concurrent-ruby (~> 1.0)
+    minitest (5.20.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    mutex_m (0.1.2)
+    nio4r (2.5.9)
+    puma (5.6.7)
+      nio4r (~> 2.0)
+    rack (2.2.8)
+    rack-protection (3.1.0)
+      rack (~> 2.2, >= 2.2.4)
+    rake (13.0.6)
+    ruby2_keywords (0.0.5)
+    sinatra (3.1.0)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.1.0)
+      tilt (~> 2.0)
+    sinatra-activerecord (2.0.26)
+      activerecord (>= 4.1)
+      sinatra (>= 1.0)
+    sqlite3 (1.6.7-arm64-darwin)
+    tilt (2.3.0)
+    timeout (0.4.0)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+
+PLATFORMS
+  arm64-darwin-23
+
+DEPENDENCIES
+  puma (~> 5.0)
+  rake
+  sinatra
+  sinatra-activerecord
+  sqlite3
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.4.20
