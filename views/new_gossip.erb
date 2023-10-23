@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Liste des gossips</title>
-</head>
-<body>
-  <h1>Liste des gossips</h1>
+<html lang="en">
 
-  <% @gossips.each do |gossip| %>
-    <div>
-      <h2><%= gossip.author %></h2>
-      <p><%= gossip.content %></p>
-    </div>
-  <% end %>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles.css">
+<title>Potins Geek</title>
+</head>
+
+<body>
+
+    <h2>Liste des Gossips</h2>
+    <ul>
+        <% @gossips.each do |gossip| %>
+            <li><strong><%= gossip.author %></strong>: <%= gossip.content %></li>
+        <% end %>
+    </ul>
+
+    <!-- ... (votre contenu body ici) ... -->
 </body>
+
 </html>
+
+

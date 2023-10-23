@@ -21,3 +21,9 @@ post '/gossips' do
 
   redirect '/'  # Redirigez l'utilisateur vers la liste des gossips après avoir soumis le formulaire
 end
+
+# Route pour afficher la liste des gossips dans la page index02.erb
+get '/gossips' do
+  @gossips = Gossip.all
+  erb :new_gossip
+end
