@@ -7,4 +7,6 @@ class Gossip < ActiveRecord::Base
     order(created_at: :desc).limit(limit)
   end
 
+  
+
 end

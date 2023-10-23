@@ -16,6 +16,8 @@ post '/gossips' do
   author = params[:author]
   content = params[:content]
 
+  
+
   # Enregistrez le gossip dans votre base de données
   Gossip.create(author: author, content: content)
 
