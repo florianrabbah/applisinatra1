@@ -12,20 +12,23 @@ get '/' do
   erb :index
 end
 
-# Route to display the form for adding a new gossip
-get '/gossips/new' do
-  erb :new_gossip
-end
+
 
 # Route to process the submitted form data
 post '/gossips' do
   author = params[:author]
   content = params[:content]
 
+  # app.rb
+get '/gossips' do
+  @gossips = db.execute('SELECT * FROM gossips')
+  erb :gossips
+end
+
+
    # Enregistrez le gossip dans votre base de données
    Gossip.create(author: author, content: content)
 
   redirect '/'  # Redirect the user to the list of gossips after submitting the form
 end
-
 

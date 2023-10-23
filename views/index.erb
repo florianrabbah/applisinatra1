@@ -4,95 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site de Gossip</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .container {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .gossip {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Potins Geek</title>
 </head>
 
 <body>
     <header>
-        <h1>Mon Site de Gossip</h1>
+        <h1>Potins Geek</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Geeks Célèbres</a></li>
+                <li><a href="#">Nouveautés</a></li>
+                <li><a href="#">A Propos</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="/">Accueil</a>
-        <a href="/nouveau_gossip">Ajouter un Gossip</a>
-    </nav>
-
     <div class="container">
-        <div class="gossip">
-            <h2>Gossip #1</h2>
-            <p>Contenu du gossip...</p>
-        </div>
+        <section class="gossip">
+            <h2>Geek du mois!</h2>
+            <div class="gossip-item">
+                <img src="geek1.jpg" alt="Geek 1">
+                <h3>Geek Célèbre 1</h3>
+                <p>Barry Kitson</p>
+            </div>
+            <div class="gossip-item">
+                <img src="../public/geeek.png" alt="Geek 2">
+                <h3>Geek Célèbre 2</h3>
+                <p>Ed Tourriol</p>
+            </div>
+        </section>
 
-        <div class="gossip">
-            <h2>Gossip #2</h2>
-            <p>Contenu du gossip...</p>
-        </div>
-        <!-- Formulaire pour ajouter un gossip -->
-        <form action="/nouveau_gossip" method="post">
-            <label for="auteur">Auteur :</label>
-            <input type="text" id="auteur" name="auteur" required><br>
+        <aside class="sidebar">
+            <h2>À la Une</h2>
+            <ul>
+                <li><a href="#">Nouvelle Bande Dessinée Geek</a></li>
+                <li><a href="#">Interview Exclusive d_un Développeur Web</a></li>
+                <li><a href="#">Top 10 des Jeux Vidéo du Moment</a></li>
+            </ul>
+        </aside>
 
-            <label for="contenu">Contenu :</label>
-            <textarea id="contenu" name="contenu" rows="4" cols="50" required></textarea><br>
 
-            <input type="submit" value="Ajouter Gossip">
-        </form>
+        <section class="add-gossip">
+            <h2>Ajouter un Nouveau Gossip</h2>
+            <form action="/gossips" method="post">
+                <label for="author">Auteur :</label>
+                <input type="text" id="author" name="author" required><br>
+
+                <label for="content">Contenu :</label>
+                <textarea id="content" name="content" required></textarea><br>
+
+                <button type="submit">Ajouter</button>
+            </form>
+            <section class="view-gossips">
+            <h2>Voir Tous les Gossips</h2>
+            <a href="/gossips">Voir tous les Gossips</a>
+        </section>
+        </section>
     </div>
+    
 
     <footer>
-        &copy; 2023 Mon Site de Gossip
+        <p>&copy; 2023 Potins Geek. Tous droits réservés.</p>
     </footer>
 </body>
 

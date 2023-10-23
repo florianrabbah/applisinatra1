@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container { 
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.gossip {
+  flex: 2;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.gossip-item {
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  ;
+}
+.sidebar a {text-decoration: none;color: rgb(105, 69, 14);
+  }
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.view-gossips {
+  margin-top: 50px; /* Ajustez la valeur selon votre préférence */
+  text-align: center;
+  position: relative;
+  top: 50%; /* Déplacez la moitié de la hauteur de l'élément vers le haut */
+  transform: translateY(-50%); /* Déplacez l'élément vers le haut de moitié de sa propre hauteur */
+}

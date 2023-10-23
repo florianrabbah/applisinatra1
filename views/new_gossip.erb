@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste des gossips</title>
+</head>
+<body>
+  <h1>Liste des gossips</h1>
+
+  <% @gossips.each do |gossip| %>
+    <div>
+      <h2><%= gossip.author %></h2>
+      <p><%= gossip.content %></p>
+    </div>
+  <% end %>
+</body>
+</html>
